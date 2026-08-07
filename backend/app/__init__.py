@@ -1,0 +1,2 @@
+"""Distributed photovoltaic RAG service."""
+

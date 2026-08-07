@@ -1,0 +1,163 @@
+questions:
+  - id: q01
+    question: 分布式光伏发电项目分为哪些类型？
+    expected_titles: [分布式光伏发电开发建设管理办法]
+  - id: q02
+    question: 自然人户用分布式光伏项目如何定义？
+    expected_titles: [分布式光伏发电开发建设管理办法]
+  - id: q03
+    question: 非自然人户用光伏适用什么管理要求？
+    expected_titles: [分布式光伏发电开发建设管理办法]
+  - id: q04
+    question: 一般工商业分布式光伏的容量边界是什么？
+    expected_titles: [分布式光伏发电开发建设管理办法]
+  - id: q05
+    question: 大型工商业分布式光伏怎样接入电网？
+    expected_titles: [分布式光伏发电开发建设管理办法]
+  - id: q06
+    question: 分布式光伏项目办理备案需要哪些信息？
+    expected_titles: [分布式光伏发电开发建设管理办法]
+  - id: q07
+    question: 项目备案主体与用电主体必须一致吗？
+    expected_titles: [分布式光伏发电开发建设管理办法问答]
+  - id: q08
+    question: 利用宅基地院落能否建设户用光伏？
+    expected_titles: [分布式光伏发电开发建设管理办法问答]
+  - id: q09
+    question: 工商业分布式光伏能否采用专线供电？
+    expected_titles: [分布式光伏发电开发建设管理办法问答]
+  - id: q10
+    question: 分布式光伏项目可以选择哪些上网模式？
+    expected_titles: [分布式光伏发电开发建设管理办法]
+  - id: q11
+    question: 项目单位在建设阶段承担哪些安全责任？
+    expected_titles: [分布式光伏发电开发建设管理办法]
+  - id: q12
+    question: 电网企业应如何开展分布式光伏接网服务？
+    expected_titles: [分布式光伏发电开发建设管理办法]
+  - id: q13
+    question: 分布式光伏利用建筑物时需要取得哪些场所权利？
+    expected_titles: [分布式光伏发电开发建设管理办法]
+  - id: q14
+    question: 分布式光伏项目建档立卡有哪些要求？
+    expected_titles: [分布式光伏发电开发建设管理办法]
+  - id: q15
+    question: 2013年的分布式光伏暂行办法是否仍然有效？
+    expected_titles: [分布式光伏发电开发建设管理办法]
+  - id: q16
+    question: GB/T 29319-2024 的标准名称是什么？
+    expected_titles: [光伏发电系统接入配电网技术规定]
+  - id: q17
+    question: 光伏发电系统接入配电网适用哪项国家标准？
+    expected_titles: [光伏发电系统接入配电网技术规定]
+  - id: q18
+    question: GB/T 29319-2024 替代了哪个旧标准？
+    expected_titles: [光伏发电系统接入配电网技术规定]
+  - id: q19
+    question: 分布式光伏接入配电网有哪些电能质量要求？
+    expected_titles: [光伏发电系统接入配电网技术规定]
+  - id: q20
+    question: 分布式光伏并网对功率控制有什么规定？
+    expected_titles: [光伏发电系统接入配电网技术规定]
+  - id: q21
+    question: 光伏发电系统并网保护应参考什么标准？
+    expected_titles: [光伏发电系统接入配电网技术规定]
+  - id: q22
+    question: 配电网发生异常时光伏系统应具备哪些响应能力？
+    expected_titles: [光伏发电系统接入配电网技术规定]
+  - id: q23
+    question: GB/T 19964-2024 适用于哪些光伏电站？
+    expected_titles: [光伏发电站接入电力系统技术规定]
+  - id: q24
+    question: 大型光伏电站接入电力系统执行哪个国家标准？
+    expected_titles: [光伏发电站接入电力系统技术规定]
+  - id: q25
+    question: GB/T 19964-2024 替代了哪个版本？
+    expected_titles: [光伏发电站接入电力系统技术规定]
+  - id: q26
+    question: 光伏电站接入系统对有功功率控制有哪些要求？
+    expected_titles: [光伏发电站接入电力系统技术规定]
+  - id: q27
+    question: 光伏电站应具备怎样的无功电压调节能力？
+    expected_titles: [光伏发电站接入电力系统技术规定]
+  - id: q28
+    question: 光伏电站故障穿越能力在哪个标准中规定？
+    expected_titles: [光伏发电站接入电力系统技术规定]
+  - id: q29
+    question: 光伏制造行业规范条件适用于哪些制造环节？
+    expected_titles: [光伏制造行业规范条件]
+  - id: q30
+    question: 2024年光伏制造行业规范条件何时实施？
+    expected_titles: [光伏制造行业规范条件]
+  - id: q31
+    question: 光伏制造企业在产品质量方面需要满足哪些要求？
+    expected_titles: [光伏制造行业规范条件]
+  - id: q32
+    question: 光伏制造行业对绿色生产提出了什么要求？
+    expected_titles: [光伏制造行业规范条件]
+  - id: q33
+    question: 光伏制造规范是否覆盖逆变器企业？
+    expected_titles: [光伏制造行业规范条件]
+  - id: q34
+    question: 2024年我国太阳能资源总体情况如何？
+    expected_titles: [中国风能太阳能资源年景公报]
+  - id: q35
+    question: 中国哪些地区太阳能资源较丰富？
+    expected_titles: [中国风能太阳能资源年景公报]
+  - id: q36
+    question: 年景公报如何评价太阳能资源相对历史平均的变化？
+    expected_titles: [中国风能太阳能资源年景公报]
+  - id: q37
+    question: 哪份资料可以用于复盘年度光伏发电资源条件？
+    expected_titles: [中国风能太阳能资源年景公报]
+  - id: q38
+    question: 分布式光伏政策如何处理项目接网与运行管理？
+    expected_titles: [分布式光伏发电开发建设管理办法]
+  - id: q39
+    question: 一般工商业与大型工商业分布式光伏有什么区别？
+    expected_titles: [分布式光伏发电开发建设管理办法, 分布式光伏发电开发建设管理办法问答]
+  - id: q40
+    question: 现行分布式光伏管理政策对投资主体有哪些规定？
+    expected_titles: [分布式光伏发电开发建设管理办法, 分布式光伏发电开发建设管理办法问答]
+
+  - id: q41
+    question: 明朝永乐皇帝是哪一年登基的？
+    expected_titles: []
+    unanswerable: true
+  - id: q42
+    question: 帮我诊断今天持续发烧和胸痛的原因。
+    expected_titles: []
+    unanswerable: true
+  - id: q43
+    question: 请预测下周比特币的最高价格。
+    expected_titles: []
+    unanswerable: true
+  - id: q44
+    question: 写一首完整模仿某在世歌手的新歌歌词。
+    expected_titles: []
+    unanswerable: true
+  - id: q45
+    question: 北京明天上午九点是否会下雨？
+    expected_titles: []
+    unanswerable: true
+  - id: q46
+    question: 我的汽车发动机故障灯为什么亮了？
+    expected_titles: []
+    unanswerable: true
+  - id: q47
+    question: 这家餐厅今晚还有没有靠窗座位？
+    expected_titles: []
+    unanswerable: true
+  - id: q48
+    question: 请给出尚未发布的2028年国家光伏补贴金额。
+    expected_titles: []
+    unanswerable: true
+  - id: q49
+    question: 某未收录品牌X-999逆变器的管理员密码是什么？
+    expected_titles: []
+    unanswerable: true
+  - id: q50
+    question: 在没有任何项目数据时精确计算我的电站明年发电量。
+    expected_titles: []
+    unanswerable: true
+

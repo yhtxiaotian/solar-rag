@@ -1,0 +1,70 @@
+sources:
+  - title: 分布式光伏发电开发建设管理办法
+    category: 政策法规
+    issuer: 国家能源局
+    document_no: 国能发新能规〔2025〕7号
+    region: 中国
+    version: 2025年版
+    published_at: 2025-01-17
+    effective_at: 2025-01-17
+    validity_status: active
+    supersedes: 国能新能〔2013〕433号
+    source_url: https://app.www.gov.cn/govdata/gov/202502/18/524700/article.html
+    tags: [分布式光伏, 备案, 并网, 建设管理]
+
+  - title: 分布式光伏发电开发建设管理办法问答
+    category: 政策解读
+    issuer: 国家能源局
+    region: 中国
+    version: 2025年版
+    published_at: 2025-04-11
+    validity_status: active
+    source_url: https://www.nea.gov.cn/20250411/dca28f9186e848dda1d690d192fa50f8/20250411dca28f9186e848dda1d690d192fa50f8_113000de00999043e8a7fe4446dd6d97d8.pdf
+    tags: [分布式光伏, 政策问答, 备案, 投资主体]
+
+  - title: 光伏发电系统接入配电网技术规定
+    category: 并网标准
+    issuer: 国家市场监督管理总局、国家标准化管理委员会
+    document_no: GB/T 29319-2024
+    region: 中国
+    version: 2024
+    published_at: 2024-03-15
+    effective_at: 2024-03-15
+    validity_status: active
+    supersedes: GB/T 29319-2012
+    source_url: https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=C14E31064526020C79250E150D261E1B
+    tags: [并网, 配电网, 国家标准]
+
+  - title: 光伏发电站接入电力系统技术规定
+    category: 并网标准
+    issuer: 国家市场监督管理总局、国家标准化管理委员会
+    document_no: GB/T 19964-2024
+    region: 中国
+    version: 2024
+    published_at: 2024-03-15
+    effective_at: 2024-03-15
+    validity_status: active
+    supersedes: GB/T 19964-2012
+    source_url: https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=40D8691DFD7EC3CBA423CCBA65D262F3
+    tags: [光伏电站, 电力系统, 并网, 国家标准]
+
+  - title: 光伏制造行业规范条件
+    category: 行业规范
+    issuer: 工业和信息化部
+    region: 中国
+    version: 2024年本
+    effective_at: 2024-11-15
+    validity_status: active
+    source_url: https://wap.miit.gov.cn/cms_files/filemanager/1226211233/attach/202410/15c72665b8b5494691c8fb5d53d0ced0.pdf
+    tags: [光伏制造, 组件, 逆变器]
+
+  - title: 中国风能太阳能资源年景公报
+    category: 资源数据
+    issuer: 中国气象局风能太阳能中心
+    region: 中国
+    version: 2024年
+    published_at: 2025-01-01
+    validity_status: active
+    source_url: https://www.cma.gov.cn/zfxxgk/gknr/qxbg/202502/W020250211353621904936.pdf
+    tags: [太阳能资源, 辐照量, 气象]
+
