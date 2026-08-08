@@ -35,13 +35,20 @@ def validate_public_https_url(url: str) -> None:
     parsed = urlparse(url)
     if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:
         raise UnsafeUrlError("资料链接必须是无账号信息的 HTTPS 地址")
+    hostname = parsed.hostname.lower().rstrip(".")
     try:
-        addresses = socket.getaddrinfo(parsed.hostname, parsed.port or 443, type=socket.SOCK_STREAM)
+        literal_address = ipaddress.ip_address(hostname)
+    except ValueError:
+        literal_address = None
+    if literal_address is not None and not literal_address.is_global:
+        raise UnsafeUrlError("资料链接不能指向内网、本机或保留地址")
+    try:
+        addresses = socket.getaddrinfo(hostname, parsed.port or 443, type=socket.SOCK_STREAM)
     except socket.gaierror as exc:
         raise UnsafeUrlError("无法解析资料链接域名") from exc
     for item in addresses:
         address = ipaddress.ip_address(item[4][0])
-        if not address.is_global:
+        if not address.is_global and hostname not in settings.allowed_download_hosts:
             raise UnsafeUrlError("资料链接不能指向内网、本机或保留地址")
 
 

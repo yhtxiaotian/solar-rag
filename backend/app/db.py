@@ -33,7 +33,11 @@ def init_db() -> None:
         connection.execute(text("CREATE EXTENSION IF NOT EXISTS vector"))
         connection.execute(text("CREATE EXTENSION IF NOT EXISTS pgcrypto"))
     Base.metadata.create_all(bind=engine)
-    configured_model = "offline-hash" if settings.ai_offline_mode else settings.embedding_model.strip()
+    configured_model = (
+        "offline-hash"
+        if settings.ai_offline_mode
+        else f"{settings.embedding_provider}:{settings.embedding_model.strip()}"
+    )
     if not configured_model:
         return
     fingerprint = f"{configured_model}\n{settings.embedding_dimension}"

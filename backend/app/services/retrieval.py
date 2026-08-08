@@ -55,7 +55,7 @@ def hybrid_retrieve(
     categories = categories or []
     question = normalize_query(question)
     query_tokens = tokenize(question)
-    query_vector = client.embeddings([question])[0]
+    query_vector = client.embeddings([question], query=True)[0]
     filters = _document_filters(categories, region)
 
     distance = Chunk.embedding.cosine_distance(query_vector).label("distance")
@@ -109,4 +109,3 @@ def hybrid_retrieve(
             item.rerank_score = scores.get(str(item.chunk.id), 0)
         fused.sort(key=lambda item: (item.rerank_score or 0, item.fused_score), reverse=True)
     return fused[: settings.retrieval_context_limit]
-

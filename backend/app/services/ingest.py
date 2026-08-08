@@ -98,7 +98,11 @@ def process_document(document_id: str) -> None:
                     content=draft.content,
                     search_tokens=tokenize(draft.content),
                     embedding=vector,
-                    embedding_model="offline-hash" if settings.ai_offline_mode else settings.embedding_model,
+                    embedding_model=(
+                        "offline-hash"
+                        if settings.ai_offline_mode
+                        else f"{settings.embedding_provider}:{settings.embedding_model}"
+                    ),
                     char_count=len(draft.content),
                 )
             )

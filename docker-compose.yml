@@ -33,8 +33,10 @@ services:
       DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-solar}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-solar_rag}
       REDIS_URL: redis://redis:6379/0
       STORAGE_PATH: /data/knowledge
+      LOCAL_EMBEDDING_CACHE_PATH: /home/appuser/.cache/fastembed
     volumes:
       - knowledge_files:/data/knowledge
+      - model_cache:/home/appuser/.cache
     depends_on:
       postgres: { condition: service_healthy }
       redis: { condition: service_healthy }
@@ -53,6 +55,7 @@ services:
       DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-solar}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-solar_rag}
       REDIS_URL: redis://redis:6379/0
       STORAGE_PATH: /data/knowledge
+      LOCAL_EMBEDDING_CACHE_PATH: /home/appuser/.cache/fastembed
     volumes:
       - knowledge_files:/data/knowledge
       - model_cache:/home/appuser/.cache
@@ -108,4 +111,3 @@ volumes:
   backups:
   caddy_data:
   caddy_config:
-

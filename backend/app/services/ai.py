@@ -2,6 +2,7 @@ import hashlib
 import json
 import math
 import re
+import threading
 import time
 from dataclasses import dataclass
 from typing import Any
@@ -29,6 +30,8 @@ class AIClient:
             "Authorization": f"Bearer {settings.ai_api_key}",
             "Content-Type": "application/json",
         }
+        self._local_embedding_model: Any | None = None
+        self._local_embedding_lock = threading.Lock()
 
     def _post(self, path: str, payload: dict[str, Any]) -> dict[str, Any]:
         if not settings.ai_configured:
@@ -68,9 +71,35 @@ class AIClient:
         norm = math.sqrt(sum(value * value for value in vector)) or 1.0
         return [value / norm for value in vector]
 
-    def embeddings(self, texts: list[str]) -> list[list[float]]:
+    def _local_embeddings(self, texts: list[str], *, query: bool) -> list[list[float]]:
+        if self._local_embedding_model is None:
+            with self._local_embedding_lock:
+                if self._local_embedding_model is None:
+                    try:
+                        from fastembed import TextEmbedding
+                    except ImportError as exc:
+                        raise AIServiceError("本地 Embedding 依赖尚未安装") from exc
+                    settings.local_embedding_cache_path.mkdir(parents=True, exist_ok=True)
+                    self._local_embedding_model = TextEmbedding(
+                        model_name=settings.embedding_model,
+                        cache_dir=str(settings.local_embedding_cache_path),
+                    )
+        encoder = self._local_embedding_model.query_embed if query else self._local_embedding_model.embed
+        try:
+            vectors = [vector.tolist() for vector in encoder(texts)]
+        except Exception as exc:
+            raise AIServiceError(f"本地 Embedding 生成失败：{exc}") from exc
+        if len(vectors) != len(texts):
+            raise AIServiceError("本地 Embedding 返回数量与输入不一致")
+        if any(len(vector) != settings.embedding_dimension for vector in vectors):
+            raise AIServiceError("本地 Embedding 维度与 EMBEDDING_DIMENSION 不一致")
+        return vectors
+
+    def embeddings(self, texts: list[str], *, query: bool = False) -> list[list[float]]:
         if settings.ai_offline_mode:
             return [self._offline_embedding(text) for text in texts]
+        if settings.embedding_provider == "local":
+            return self._local_embeddings(texts, query=query)
         data = self._post(
             "/embeddings",
             {"model": settings.embedding_model, "input": texts, "encoding_format": "float"},

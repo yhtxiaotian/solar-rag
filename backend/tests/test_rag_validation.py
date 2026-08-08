@@ -7,6 +7,13 @@ def test_removes_invented_citation():
     assert cited == {1}
 
 
+def test_normalizes_model_evidence_label_to_numeric_citation():
+    answer, cited = _validated_answer("一般工商业可选择两种上网模式 [证据2]。", 3)
+
+    assert answer == "一般工商业可选择两种上网模式 [2]。"
+    assert cited == {2}
+
+
 def test_refuses_uncited_answer():
     answer, cited = _validated_answer("这是一个没有引用的确定结论。", 3)
     assert answer == REFUSAL

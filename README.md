@@ -31,10 +31,12 @@
 
 5. 本机访问 `http://localhost`。管理入口为 `/admin`。
 
-AI 服务需要兼容：
+对话与重排服务需要兼容：
 
 - `POST {AI_BASE_URL}/chat/completions`
-- `POST {AI_BASE_URL}/embeddings`
+
+Embedding 可设置为 OpenAI-compatible 的 `/embeddings` 接口，也可设置
+`EMBEDDING_PROVIDER=local`，由 FastEmbed 首次使用时自动下载中文模型并通过 CPU 运行。
 
 `EMBEDDING_DIMENSION` 必须与模型输出一致。首次建库后如更换 Embedding 模型或维度，应清空并重建文本块向量及 HNSW 索引，不能混用不同维度。
 
@@ -68,6 +70,8 @@ sources:
 ```
 
 清单只会在管理员明确导入时下载，不包含定时爬虫。远程地址必须使用 HTTPS，并会拒绝内网、保留地址、危险重定向和超过大小限制的文件。请只收录有合法使用权的标准全文；仅公开元数据的标准页面不等于取得标准全文授权。
+
+如果 Docker Desktop 使用会返回 `198.18.0.0/15` Fake-IP 的代理，可在本机 `.env` 的 `URL_HOST_ALLOWLIST` 中按逗号列出已核验的官方资料域名。该例外只对精确域名生效，私有 IP 直链仍会被拒绝。
 
 ## 本地开发
 

@@ -44,6 +44,10 @@ def _validated_answer(
     allowed_pages: set[int] | None = None,
     allowed_files: set[str] | None = None,
 ) -> tuple[str, set[int]]:
+    # Some OpenAI-compatible models echo the evidence label as ``[证据2]``
+    # even when the requested public citation format is ``[2]``. Normalize
+    # both bracket styles before validating against this request's evidence.
+    answer = re.sub(r"[\[【]\s*证据\s*(\d+)\s*[\]】]", r"[\1]", answer)
     references = {int(value) for value in re.findall(r"\[(\d+)]", answer)}
     valid = {value for value in references if 1 <= value <= evidence_count}
     for invalid in references - valid:
@@ -97,7 +101,7 @@ def answer_question(
 
     system = (
         "你是分布式光伏知识库助手。只能依据用户消息中的证据回答，不得使用记忆补充政策、标准、"
-        "设备参数或数字。每个重要结论后必须标注对应的 [证据编号]。证据不足时原样回答："
+        "设备参数或数字。每个重要结论后必须使用 [1]、[2] 这样的纯数字引用，不要写成 [证据1]。证据不足时原样回答："
         f"“{REFUSAL}”不同版本冲突时，说明冲突并优先采用明确标记为现行且生效日期较新的资料。"
         "回答使用简洁、专业的中文；不得编造文件名、页码或引用编号。"
     )

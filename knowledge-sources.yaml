@@ -6,11 +6,22 @@ sources:
     region: 中国
     version: 2025年版
     published_at: 2025-01-17
-    effective_at: 2025-01-17
+    effective_at: 2025-01-23
     validity_status: active
     supersedes: 国能新能〔2013〕433号
-    source_url: https://app.www.gov.cn/govdata/gov/202502/18/524700/article.html
-    tags: [分布式光伏, 备案, 并网, 建设管理]
+    source_url: https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web2792/site/attach/0/a20c1a76406342ca88b9680b5793ae9a.pdf
+    tags: [分布式光伏, 备案, 并网, 建设管理, 全生命周期]
+    notes: 国家能源局制定，浙江省政府网站公开的全文 PDF；2025年1月23日向社会公布并施行，有效期五年。
+
+  - title: 分布式光伏发电开发建设管理办法政策解读
+    category: 政策解读
+    issuer: 国家能源局
+    region: 中国
+    version: 2025年版
+    published_at: 2025-01-23
+    validity_status: active
+    source_url: https://www.nea.gov.cn/20250123/d38e5436b4d04159863ddbc10a6ede10/c.html
+    tags: [分布式光伏, 政策解读, 项目分类, 备案, 并网]
 
   - title: 分布式光伏发电开发建设管理办法问答
     category: 政策解读
@@ -20,33 +31,83 @@ sources:
     published_at: 2025-04-11
     validity_status: active
     source_url: https://www.nea.gov.cn/20250411/dca28f9186e848dda1d690d192fa50f8/20250411dca28f9186e848dda1d690d192fa50f8_113000de00999043e8a7fe4446dd6d97d8.pdf
-    tags: [分布式光伏, 政策问答, 备案, 投资主体]
+    tags: [分布式光伏, 政策问答, 备案, 投资主体, 上网模式]
 
-  - title: 光伏发电系统接入配电网技术规定
-    category: 并网标准
-    issuer: 国家市场监督管理总局、国家标准化管理委员会
-    document_no: GB/T 29319-2024
+  - title: 关于深化新能源上网电价市场化改革 促进新能源高质量发展的通知
+    category: 电价与交易
+    issuer: 国家发展改革委、国家能源局
+    document_no: 发改价格〔2025〕136号
     region: 中国
-    version: 2024
-    published_at: 2024-03-15
-    effective_at: 2024-03-15
+    version: 2025年版
+    published_at: 2025-02-09
     validity_status: active
-    supersedes: GB/T 29319-2012
-    source_url: https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=C14E31064526020C79250E150D261E1B
-    tags: [并网, 配电网, 国家标准]
+    source_url: https://www.ndrc.gov.cn/xxgk/zcfb/tz/202502/t20250209_1396066.html
+    tags: [新能源电价, 电力市场, 存量项目, 增量项目, 机制电价]
 
-  - title: 光伏发电站接入电力系统技术规定
-    category: 并网标准
-    issuer: 国家市场监督管理总局、国家标准化管理委员会
-    document_no: GB/T 19964-2024
+  - title: 深化新能源上网电价市场化改革答记者问
+    category: 政策解读
+    issuer: 国家发展改革委、国家能源局
     region: 中国
-    version: 2024
-    published_at: 2024-03-15
-    effective_at: 2024-03-15
+    version: 2025年版
+    published_at: 2025-02-09
     validity_status: active
-    supersedes: GB/T 19964-2012
-    source_url: https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=40D8691DFD7EC3CBA423CCBA65D262F3
-    tags: [光伏电站, 电力系统, 并网, 国家标准]
+    source_url: https://www.ndrc.gov.cn/xxgk/jd/jd/202502/t20250209_1396069.html
+    tags: [新能源电价, 政策问答, 机制电价, 存量项目, 增量项目]
+
+  - title: 关于进一步组织实施好“千家万户沐光行动”的通知
+    category: 政策法规
+    issuer: 国家能源局综合司
+    document_no: 国能综通新能〔2025〕44号
+    region: 中国
+    version: 2025年版
+    published_at: 2025-03-14
+    validity_status: active
+    source_url: https://www.nea.gov.cn/20250320/77110f875bc34fe3a6c19dd1babcfbf0/c.html
+    tags: [户用光伏, 农村光伏, 乡村振兴, 电网承载力, 运维]
+
+  - title: 可再生能源绿色电力证书管理实施细则（试行）
+    category: 绿证与交易
+    issuer: 国家能源局
+    document_no: 国能发资质规〔2025〕107号
+    region: 中国
+    version: 试行
+    published_at: 2025-11-28
+    effective_at: 2025-11-28
+    validity_status: active
+    source_url: https://www.nea.gov.cn/20260107/9a905f263a8b4aa4a06e1a96855cc8eb/c.html
+    tags: [绿证, 分布式光伏, 自发自用, 核发, 交易, 核销]
+    notes: 自印发之日起实施，有效期三年；包含分布式光伏绿证核发和项目业主相关规定。
+
+  - title: 关于促进可再生能源绿色电力证书市场高质量发展的意见
+    category: 绿证与交易
+    issuer: 国家发展改革委、国家能源局、工业和信息化部、商务部、国家数据局
+    document_no: 发改能源〔2025〕262号
+    region: 中国
+    version: 2025年版
+    published_at: 2025-03-06
+    validity_status: active
+    source_url: https://www.nea.gov.cn/20250318/9d59e7bf731f4cd0830b125f6223b401/c.html
+    tags: [绿证, 绿色电力, 电力交易, 可再生能源]
+
+  - title: 中国绿色电力证书发展报告
+    category: 行业报告
+    issuer: 国家能源局电力业务资质管理中心
+    region: 中国
+    version: 2025年
+    published_at: 2026-05-15
+    validity_status: active
+    source_url: https://www.nea.gov.cn/20260515/76a82a7375a942e2ab748b36cf7cc14b/2026051576a82a7375a942e2ab748b36cf7cc14b_0895b8d8dab1ba4f678cd691b5710302c9.pdf
+    tags: [绿证, 绿色电力, 市场数据, 年度报告]
+
+  - title: 分布式光伏备案接网推进情况专项监管相关问题案例通报
+    category: 监管案例
+    issuer: 国家能源局综合司
+    region: 中国
+    version: 2025年版
+    published_at: 2025-04-22
+    validity_status: active
+    source_url: https://www.nea.gov.cn/20250422/1a5f2975d3fc4d35a3a10cb90ae7642c/202504221a5f2975d3fc4d35a3a10cb90ae7642c_299fa166dd3daf4e308325377c969b27f0.pdf
+    tags: [分布式光伏, 备案, 接网, 监管, 典型案例]
 
   - title: 光伏制造行业规范条件
     category: 行业规范
@@ -56,15 +117,69 @@ sources:
     effective_at: 2024-11-15
     validity_status: active
     source_url: https://wap.miit.gov.cn/cms_files/filemanager/1226211233/attach/202410/15c72665b8b5494691c8fb5d53d0ced0.pdf
-    tags: [光伏制造, 组件, 逆变器]
+    tags: [光伏制造, 组件, 逆变器, 产品质量]
 
   - title: 中国风能太阳能资源年景公报
     category: 资源数据
     issuer: 中国气象局风能太阳能中心
     region: 中国
     version: 2024年
-    published_at: 2025-01-01
+    published_at: 2025-02-11
     validity_status: active
     source_url: https://www.cma.gov.cn/zfxxgk/gknr/qxbg/202502/W020250211353621904936.pdf
-    tags: [太阳能资源, 辐照量, 气象]
+    tags: [太阳能资源, 辐照量, 气象, 年度公报]
 
+  - title: 光伏发电系统接入配电网技术规定
+    category: 并网标准
+    issuer: 国家市场监督管理总局、国家标准化管理委员会
+    document_no: GB/T 29319-2024
+    region: 中国
+    version: "2024"
+    published_at: 2024-03-15
+    effective_at: 2024-03-15
+    validity_status: active
+    supersedes: GB/T 29319-2012
+    local_file_name: GBT_29319-2024_光伏发电系统接入配电网技术规定.pdf
+    tags: [并网, 配电网, 国家标准]
+    notes: "待补正版全文。官方元数据：https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=C14E31064526020C79250E150D261E1B"
+
+  - title: 光伏发电站接入电力系统技术规定
+    category: 并网标准
+    issuer: 国家市场监督管理总局、国家标准化管理委员会
+    document_no: GB/T 19964-2024
+    region: 中国
+    version: "2024"
+    published_at: 2024-03-15
+    effective_at: 2024-03-15
+    validity_status: active
+    supersedes: GB/T 19964-2012
+    local_file_name: GBT_19964-2024_光伏发电站接入电力系统技术规定.pdf
+    tags: [光伏电站, 电力系统, 并网, 国家标准]
+    notes: "待补正版全文。官方元数据：https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=40D8691DFD7EC3CBA423CCBA65D262F3"
+
+  - title: 分布式电源接入电力系统承载力评估导则
+    category: 并网标准
+    issuer: 国家能源局
+    document_no: DL/T 2041-2025
+    region: 中国
+    version: "2025"
+    published_at: 2025-12-18
+    effective_at: 2026-06-18
+    validity_status: active
+    supersedes: DL/T 2041-2019
+    local_file_name: DLT_2041-2025_分布式电源接入电力系统承载力评估导则.pdf
+    tags: [分布式电源, 电网承载力, 可开放容量, 行业标准]
+    notes: "待补正版全文。官方元数据：https://std.samr.gov.cn/hb/search/stdHBDetailed?id=52C44B7747821D39E06397BE0A0A8891"
+
+  - title: 光伏发电企业安全生产标准化实施规范
+    category: 安全标准
+    issuer: 国家能源局
+    document_no: DL/T 3007-2025
+    region: 中国
+    version: "2025"
+    published_at: 2025-12-18
+    effective_at: 2026-06-18
+    validity_status: active
+    local_file_name: DLT_3007-2025_光伏发电企业安全生产标准化实施规范.pdf
+    tags: [光伏电站, 安全生产, 标准化, 行业标准]
+    notes: "待补正版全文。发布依据：国家能源局公告2025年第7号。"

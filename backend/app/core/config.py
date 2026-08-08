@@ -20,13 +20,16 @@ class Settings(BaseSettings):
     redis_url: str = "redis://redis:6379/0"
     storage_path: Path = Path("/data/knowledge")
     max_file_size_mb: int = 100
+    url_host_allowlist: str = ""
     allowed_origins: str = "http://localhost:3000,http://127.0.0.1:3000"
 
     ai_base_url: str = ""
     ai_api_key: str = ""
     chat_model: str = ""
+    embedding_provider: str = "openai"
     embedding_model: str = ""
     embedding_dimension: int = 1536
+    local_embedding_cache_path: Path = Path("/home/appuser/.cache/fastembed")
     rerank_model: str = ""
     ai_timeout_seconds: int = 90
     ai_offline_mode: bool = False
@@ -65,6 +68,14 @@ class Settings(BaseSettings):
             raise ValueError("EMBEDDING_DIMENSION must be between 1 and 4000")
         return value
 
+    @field_validator("embedding_provider")
+    @classmethod
+    def valid_embedding_provider(cls, value: str) -> str:
+        normalized = value.strip().lower()
+        if normalized not in {"openai", "local"}:
+            raise ValueError("EMBEDDING_PROVIDER must be 'openai' or 'local'")
+        return normalized
+
     @property
     def cors_origins(self) -> list[str]:
         return [item.strip() for item in self.allowed_origins.split(",") if item.strip()]
@@ -74,10 +85,22 @@ class Settings(BaseSettings):
         return self.max_file_size_mb * 1024 * 1024
 
     @property
+    def allowed_download_hosts(self) -> set[str]:
+        return {
+            item.strip().lower().rstrip(".")
+            for item in self.url_host_allowlist.split(",")
+            if item.strip()
+        }
+
+    @property
     def ai_configured(self) -> bool:
-        return self.ai_offline_mode or bool(
-            self.ai_base_url and self.ai_api_key and self.chat_model and self.embedding_model
+        if self.ai_offline_mode:
+            return True
+        chat_ready = bool(self.ai_base_url and self.ai_api_key and self.chat_model)
+        embedding_ready = bool(self.embedding_model) and (
+            self.embedding_provider == "local" or bool(self.ai_base_url and self.ai_api_key)
         )
+        return chat_ready and embedding_ready
 
 
 @lru_cache
@@ -86,4 +109,3 @@ def get_settings() -> Settings:
 
 
 settings = get_settings()
-
